@@ -29,7 +29,7 @@ library(here)
 library(ape)
 library(patchwork)
 library(vegan)
-#library(Cairo)
+library(Cairo)
 library(zCompositions)
 library(compositions)
 
@@ -485,10 +485,10 @@ p_3B
 
 # ----- 5.2 Save Raw Outputs ---------------------------------------------------
 
-#ggsave(here("figures", "Figure 4A raw.svg"), plot = p_3A, dpi = 300, width = 7, height = 3.5)
-#ggsave(here("figures", "Figure 4A raw.png"), plot = p_3A, dpi = 300, width = 7, height = 3.5)
+ggsave(here("figures", "Figure 4A raw.svg"), plot = p_3A, dpi = 300, width = 7, height = 3.5, device = cairo_pdf)
+ggsave(here("figures", "Figure 4A raw.png"), plot = p_3A, dpi = 300, width = 7, height = 3.5)
 
-#ggsave(here("figures", "Figure 4B raw.svg"), plot = p_3B, dpi = 300, width = 7, height = 2.5)
-#ggsave(here("figures", "Figure 4B raw.png"), plot = p_3B, dpi = 300, width = 7, height = 2.5)
+ggsave(here("figures", "Figure 4B raw.svg"), plot = p_3B, dpi = 300, width = 7, height = 2.5, device = cairo_pdf)
+ggsave(here("figures", "Figure 4B raw.png"), plot = p_3B, dpi = 300, width = 7, height = 2.5)
 
 

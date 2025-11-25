@@ -28,7 +28,7 @@ library(microbiome)
 library(here)
 library(ape)
 library(patchwork)
-#library(Cairo)
+library(Cairo)
 library(zCompositions)
 library(compositions)
 
@@ -385,9 +385,9 @@ if (!file.exists(here("models", "PC4_repeatability.Rdata"))) {
 
 } else {load(here("models", "PC4_repeatability.Rdata"))}
 
-PC4_uninjured_rep <- model_PC4_rep$VCV[,1] / (model_PC4_rep$VCV[,1] + model_PC4_rep$VCV[,6])
-PC4_saline_rep <- model_PC4_rep$VCV[,2] / (model_PC4_rep$VCV[,2] + model_PC4_rep$VCV[,7])
-PC4_dcv_rep <- model_PC4_rep$VCV[,3] / (model_PC4_rep$VCV[,3] + model_PC4_rep$VCV[,8])
+PC4_uninjured_rep <- model_PC4_rep$VCV[,1] / (model_PC4_rep$VCV[,1] + model_PC4_rep$VCV[,5])
+PC4_saline_rep <- model_PC4_rep$VCV[,2] / (model_PC4_rep$VCV[,2] + model_PC4_rep$VCV[,6])
+PC4_dcv_rep <- model_PC4_rep$VCV[,3] / (model_PC4_rep$VCV[,3] + model_PC4_rep$VCV[,7])
 
 # ----- 3.16 Summarise Models --------------------------------------------------
 
@@ -488,9 +488,9 @@ p_3B
 
 # ----- 5.2 Save Raw Outputs ---------------------------------------------------
 
-#ggsave(here("figures", "Figure 3A raw.svg"), plot = p_3A, dpi = 300, width = 7, height = 3.5, device = cairo_pdf)
-#ggsave(here("figures", "Figure 3A raw.png"), plot = p_3A, dpi = 300, width = 7, height = 3.5)
+ggsave(here("figures", "Figure 3A raw.svg"), plot = p_3A, dpi = 300, width = 7, height = 3.5, device = cairo_pdf)
+ggsave(here("figures", "Figure 3A raw.png"), plot = p_3A, dpi = 300, width = 7, height = 3.5)
 
-#ggsave(here("figures", "Figure 3B raw.svg"), plot = p_3B, dpi = 300, width = 7, height = 2.5, device = cairo_pdf)
-#ggsave(here("figures", "Figure 3B raw.png"), plot = p_3B, dpi = 300, width = 7, height = 2.5)
+ggsave(here("figures", "Figure 3B raw.svg"), plot = p_3B, dpi = 300, width = 7, height = 2.5, device = cairo_pdf)
+ggsave(here("figures", "Figure 3B raw.png"), plot = p_3B, dpi = 300, width = 7, height = 2.5)
 

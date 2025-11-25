@@ -28,7 +28,7 @@ library(microbiome)
 library(here)
 library(ape)
 library(patchwork)
-#library(Cairo)
+library(Cairo)
 
 library(conflicted)
 conflict_prefer("select", "dplyr")
